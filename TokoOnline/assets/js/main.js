@@ -52,3 +52,44 @@ function scrollHeader(){
     else nav.classList.remove('scoll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+/* ============== SHOW SCROLL TOP ============ */
+function scrollTop(){
+    const scrollTop = document.getElementById('scroll-top')
+
+    // when the scroll is higher than 560 viewport height, add the show-scroll class to the tag with the scroll-top-class
+    if(this.scrollY >= 560) scrollTop.classList.add('show-scroll');
+    else scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop)
+
+
+/* ============== SLIDESHOW ============ */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n){
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slidesIndex = slides.length}
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace("active","");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += "active";
+}
