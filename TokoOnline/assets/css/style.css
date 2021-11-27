@@ -23,6 +23,7 @@
     --normal-font-size: .938rem;
     --samall-font-size: .813rem;
     --smaller-font-size: .75rem;
+    --smallest-font-size: .55rem;
 
     
     /* ============ FONT WEIGHT ============ */
@@ -388,12 +389,107 @@ img{
 
 
 /* ============ SERVICE ============ */
+.services__container{
+    row-gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+}
 
+.services__content{
+    text-align: center;
+}
 
+.services__img{
+    width: 170px;
+    border-radius: .5rem;
+    margin-bottom: var(--mb-2);
+}
+
+.services__title{
+    font-size: var(--h3-font-size);
+    color: var(--tittle-color);
+    margin-bottom: var(--mb-1);
+}
+
+.services__description{
+    padding: 0 1.5rem;
+}
 
 /* ============ PRODUCT ============ */
+.products__container{
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
 
+.products__content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-color);
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px rgb(3,74,40,.15);
+    
+    padding: .75rem .75rem 3rem .75rem;
+}
 
+.products__content:hover{
+    background-color: rgba(201, 196, 196, .3);
+    transition: .3s;
+}
+
+.products__img{
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--mb-2);
+    filter: drop-shadow(0 5px 2px rgba(80, 79, 79, .2));
+}
+
+.products__name, .products__price{
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.products__name{
+    font-size: var(--normal-font-size);
+}
+
+.products__detail, .products__price{
+    font-size: var(--small-font-size);
+}
+
+.products__price{
+    margin-bottom: var(--mb-4);
+}
+
+.products__detail{
+    margin-bottom: var(--mb-1);
+}
+
+.products__button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    padding: .625rem .813rem;
+    border-radius: .5rem 0 .5rem 0;
+}
+
+.products__button_detail{
+    font-size: var(--smallest-font-size);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: .625rem .813rem;
+    border-radius: 0 .5rem 0 .5rem;
+}
+
+/* ============ SLICK ============ */
+.slick_two{
+    width: 90%;
+    margin: auto;
+}
 
 /* ============ SIZE CHART ============ */
 
