@@ -11,6 +11,11 @@
         <!--================= CSS ==================-->
         <link rel="stylesheet" href="assets/css/style.css">
         <title>Ventela Shoes</title>
+        
+         <!--================= CSS SLICK ==================-->
+         <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+         <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+
     </head>
     <body>
         <!--================= SCROLL TOP ==================-->
@@ -110,9 +115,79 @@
             </section>
 
             <!--================= SERVICES  ==================-->
+            <section class="services section bd-container" id="services">
+                <span class="section-subtitle">Offering</span>
+                <h2 class="section-title">Our amazing services</h2>
+                <div class="services__container bd-grid">
+                    <div class="services__content">
+                        <img src="assets/img/upper.jpg" alt="" class="services__img">
+                        <h3 class="services__title">Upper Canvas 12oz</h3>
+                        <p class="services__description">Menggunakan material canvas 12oz berkualitas baik, cukup lembut, dan memiliki daya tahan yang kuat.</p>
+                    </div>
 
+                    <div class="services__content">
+                        <img src="assets/img/insole.jpg" alt="" class="services__img">
+                        <h3 class="services__title">Ultralite Foam Insole</h3>
+                        <p class="services__description">Teknologi Ultralite Foam membuat insole menjadi empuk dan nyaman  sehingga kaki tidak mudah pegal.</p>
+                    </div>
+
+                    <div class="services__content">
+                        <img src="assets/img/stitching.jpg" alt="" class="services__img">
+                        <h3 class="services__title">Stitching</h3>
+                        <p class="services__description">Stitching yang rapih menjadikan sepatu memiliki bentuk yang bagus, kokoh, nyaman, dan tahan lama.</p>
+                    </div>
+                </div>
+            </section>
 
             <!--================= PRODUCT ==================-->
+            <section class="products section bd-container" id="products">
+                <span class="section-subtitle">Special</span>
+                <h2 class="section-title">PRODUCTS of the Week</h2>
+
+                <div class="products__container bd-grid logo-slider slick_two">
+                    <div class="products__content">
+                        <img src="assets/img/Sneakers1.png" alt="" class="products__img">
+                        <h3 class="products__name">Hard13 Noir</h3>
+                        <span class="products__detail">Low</span><br>
+                        <span class="products__price">Rp. 400.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Product</a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+    
+                    </div>
+    
+                    <div class="products__content">
+                        <img src="assets/img/Sneakers2.png" alt="" class="products__img">
+                        <h3 class="products__name">Sang Sakerta</h3>
+                        <span class="products__detail">Low</span><br>
+                        <span class="products__price">Rp. 430.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Product</a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+    
+                    </div>
+    
+                    <div class="products__content">
+                        <img src="assets/img/Sneakers3.png" alt="" class="products__img">
+                        <h3 class="products__name">P'76 Series</h3>
+                        <span class="products__detail">Low</span><br>
+                        <span class="products__price">Rp. 350.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Product</a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+    
+                    </div>
+    
+                    <div class="products__content">
+                        <img src="assets/img/Sneakers4.png" alt="" class="products__img">
+                        <h3 class="products__name">Urban</h3>
+                        <span class="products__detail">Slip on</span><br>
+                        <span class="products__price">Rp. 300.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Product</a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+    
+                    </div>
+
+                </div>
+
+            </section>
 
 
             <!--================= SIZE CHART ==================-->
@@ -131,7 +206,24 @@
 
         <!--================= MAIN JS ==================-->
         <script src="assets/js/main.js"></script>
+        
+        <!--================= JS SLICK ==================-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/js/slick.js"></script>
+        <script src="assets/js/slick.min.js"></script>
 
+        <script>
+            $('.slick_two').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                autoplay: 2000,
+                autoplaySpeed: 2000,
+                infinite: true
+            });
+
+        </script>
 
     </body>
 </html>
