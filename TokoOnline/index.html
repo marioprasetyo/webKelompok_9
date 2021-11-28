@@ -7,7 +7,6 @@
         <!--================= BOX ICONS ==================-->
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-
         <!--================= CSS ==================-->
         <link rel="stylesheet" href="assets/css/style.css">
         <title>Ventela Shoes</title>
@@ -15,7 +14,6 @@
          <!--================= CSS SLICK ==================-->
          <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
          <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-
     </head>
     <body>
         <!--================= SCROLL TOP ==================-->
@@ -37,10 +35,64 @@
                         <li class="nav__item"><a href="#product" class="nav__link">Product</a></li>
                         <li class="nav__item"><a href="#sizechart" class="nav__link">Size Chart</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
+                        <li><i class='bx bx-toggle-left change-theme' id='theme__button'></i></li>
                     </ul>
                 </div>
+                
                 <div class="nav__shop" id="nav-shop">
-                    <i class='bx bx-shopping-bag'></i>
+                    <a href="#" class="nav__icon">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span>2</span>
+                    </a>
+                    <div class="nav__shop-content">
+                        <div class="title_shop">
+                            <span>Keranjang Belanja</span>
+                        </div>
+
+                        <div class="item">
+                            <div class="image_cart">
+                                <div class="image_c">
+                                    <img src="assets/img/Sneakers1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="description">
+                                <span>Hard13 Noir</span>
+                                <span>1 Pcs</span>
+                            </div>
+                            <div class="total-price">Rp. 400.000</div>
+                            <a href="#" class="delete_item">
+                                <i class="bx bx-x"></i>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <div class="image_cart">
+                                <div class="image_c">
+                                    <img src="assets/img/Sneakers2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="description">
+                                <span>Sang Sekerta</span>
+                                <span>1 Pcs</span>
+                            </div>
+                            <div class="total-price">Rp. 430.000</div>
+                            <a href="#" class="delete_item">
+                                <i class="bx bx-x"></i>
+                            </a>
+                        </div>
+
+                        <div class="total-all">
+                            <span>Total</span>
+                            <span>Rp. 830.000</span>
+                        </div>
+
+                        <div class="btn-viewcard">
+                            <a href="#" class="button-top">View Card</a>
+                        </div>
+                        <div class="btn-checkout">
+                            <a href="#" class="button-top2">Check Out</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -174,9 +226,8 @@
                    <div class="size__data">
                        <span class="secion-subtitle size___initial">Size Chart</span>
                        <h2 class="section-title size__initial">Find Your Size</h2>
-                       <p class="size__description">Silahkan Luangkan waktu Anda sejenak untuk mengamati size chart kami.<br>
-                    Ini akan membantu Anda mengetahui ukuran yan sesuai. </p>
-                   ,</div>
+                       <p class="size__description">Silahkan Luangkan waktu Anda sejenak untuk mengamati size chart kami.<br> Ini akan membantu Anda mengetahui ukuran yan sesuai. </p>
+                   </div>
                    <img src="assets/img/sizechart.png" alt="" class="size__img">
                </div>
             </section>
@@ -202,11 +253,9 @@
                 <div class="footer__content">
                     <a href="#" class="footer_logo">Ventela®</a>
                     <span class="footer__description">Store</span>
-                </div>
-            <div>
-                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
                 </div>
                 <div class="footer__content">
                     <h3 class="footer__title">Service</h3>
@@ -229,13 +278,13 @@
                     <h3 class="footer__title">Adress</h3>
                     <ul>
                         <li>Jl. Kopo Ketapang KM. 12.8</li>
-                        <li>Jl. Bandung 40971 - Indonesia</li>
-                        <li>Jl. Phone : +62-22 5891445</li>
-                        <li>Jl. Whatsapp : 08112406969</li>                     
+                        <li>Bandung 40971 - Indonesia</li>
+                        <li>Phone : +62-22 5891445</li>
+                        <li>WhatsApp : 08112406969</li>                     
                     </ul>
                 </div>
             </div>
-            <p class="footer__copy">&#169; 2021 Kelompok 9. All right</p>
+            <p class="footer__copy">&#169; 2021 Kelompok 9. All right reserved</p>
         <footer class="footer section bd-container">
         </footer>
                
@@ -251,13 +300,27 @@
         <script src="assets/js/slick.min.js"></script>
         <script>
             $('.slick_two').slick({
-                slidesToShow: 2,
-                slidesToScroll: 1,
                 dots: true,
                 arrows: true,
                 autoplay: 2000,
                 autoplaySpeed: 2000,
-                infinite: true
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 5000,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
         </script>
     </body>
