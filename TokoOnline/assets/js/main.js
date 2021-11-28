@@ -63,6 +63,35 @@ function scrollTop(){
 }
 window.addEventListener('scroll', scrollTop)
 
+/* ============== DARK LIGHT THEME ============ */
+const themeButton = document.getElementById('theme__button')
+const darkTheme ='dark-theme'
+const iconTheme = 'bx-toggle-right'
+
+//previous selected topic(if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selectedIcon')
+
+//we obtain the current theme that the interface has by validate the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'bx-toggle-left' : 'bx-toggle-right'
+
+//we validate if the user previously chose a topic
+if (selectedTheme){
+    //if the validation is fulfilled, we ask what the isue was to knowe if we activated or deactivated
+    document.body.classList[selectedTheme == 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon == 'bx-toggle-left' ? 'add' : 'remove'](iconTheme)
+}
+
+//activated /deactivated the theme manually with the button
+themeButton.addEventListener('click', () =>{
+    //add or remove the dark/icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    //we save the theme and the current icon that the use choise
+    localStorage.setItem('selected-theme',getCurrentTheme)
+    localStorage.setItem('selected-icon',getCurrentIcon)
+})
 
 /* ============== SLIDESHOW ============ */
 var slideIndex = 1;
@@ -93,3 +122,18 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += "active";
 }
+
+/* ============== SCROOL REVAL ANIMATION ============ */
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.home, .about__data, .about__img, 
+            .services__content, .products, .size__data, 
+            .size__img, .contact__data, .contact__button, 
+            .footer__content, .detail__img, .detail__data`,{
+        interval:200
+})
